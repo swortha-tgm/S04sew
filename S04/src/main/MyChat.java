@@ -12,7 +12,7 @@ public class MyChat {
 	 * @param args
 	 *            Die IP mit der Verbunden werden soll und der Port
 	 * 
-	 *            Main Klasse fuer Cht-Programm
+	 *            Main Klasse fuer Chat-Programm
 	 */
 	public static void main(String[] args) {
 		try {

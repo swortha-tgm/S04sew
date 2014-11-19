@@ -14,13 +14,14 @@ import javax.swing.JTextField;
 
 import message.Badwordfilter;
 import message.ChatMessage;
+import message.UpperCase;
 import message.WriteAble;
 
 /**
  * @author Wortha Simon
  * @version 20141117
  *
- *	Implementiert alle Anzeigefelder für die GUI
+ *	Implementiert alle Anzeigefelder fuer die GUI
  */
 public class View extends JFrame {
 	/**
@@ -69,9 +70,12 @@ public class View extends JFrame {
 		setVisible(true);
 	}
 
+	/**
+	 * @param neu
+	 */
 	public void changeArea(String neu) {
 		WriteAble message = new ChatMessage(neu);
-		//message = new UpperCase(message);
+		message = new UpperCase(message).upper();
 		if (filter.isSelected())
 			message = new Badwordfilter(message);
 		this.chat.append(message.getString() + "\n");
