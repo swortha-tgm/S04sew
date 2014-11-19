@@ -13,5 +13,4 @@ public class UpperCase extends Decorator {
 		// TODO Auto-generated method stub
 		return null;
 	}
-
 }

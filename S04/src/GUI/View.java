@@ -50,4 +50,8 @@ public class View extends JFrame {
 	public static void main(String[] args) {
 		new View();
 	}
+	
+	public void changeArea(String neu) {
+		this.chat.append(neu +"\n");
+	}
 }
