@@ -7,7 +7,7 @@ package message;
  */
 public interface WriteAble {
 	/**
-	 * @return gibt die Nahricht zurück
+	 * @return gibt die Nahricht zurueck
 	 */
 	public String getString();
 }

@@ -12,7 +12,7 @@ public class MyChat {
 	 * @param args
 	 *            Die IP mit der Verbunden werden soll und der Port
 	 * 
-	 *            Main Klasse für Cht-Programm
+	 *            Main Klasse fuer Cht-Programm
 	 */
 	public static void main(String[] args) {
 		try {
@@ -20,7 +20,7 @@ public class MyChat {
 		}catch(NumberFormatException nfe) {
 			System.out.println("ungueltiger Port");
 		}catch(ArrayIndexOutOfBoundsException aioobe) {
-			System.out.println("ungültige Eingabe");
+			System.out.println("ungueltige Eingabe");
 		}
 	}
 }

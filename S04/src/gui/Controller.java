@@ -17,9 +17,9 @@ public class Controller implements ActionListener {
 
 	/**
 	 * @param hostName
-	 *            Die IP Adresse es Hosts mit dem sich verbunden werden möchte
+	 *            Die IP Adresse es Hosts mit dem sich verbunden werden moechte
 	 * @param port
-	 *            Der Port über dem die Verbindung läuft
+	 *            Der Port ueber dem die Verbindung laeuft
 	 */
 	public Controller(String hostName, int port) {
 		v = new View(this);
