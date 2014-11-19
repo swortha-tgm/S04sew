@@ -1,4 +1,4 @@
-package GUI;
+package gui;
 
 import java.awt.BorderLayout;
 import java.awt.GridLayout;
@@ -11,10 +11,10 @@ import javax.swing.JPanel;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
-import connection.Badwordfilter;
-import connection.ChatMessage;
-import connection.UpperCase;
-import connection.WriteAble;
+import message.Badwordfilter;
+import message.ChatMessage;
+import message.UpperCase;
+import message.WriteAble;
 
 public class View extends JFrame {
 	private JButton senden;
@@ -60,8 +60,8 @@ public class View extends JFrame {
 
 	public void changeArea(String neu) {
 		WriteAble message = new ChatMessage(neu);
-		message = new UpperCase(message);
-		if (!filter.isEnabled())
+		//message = new UpperCase(message);
+		if (filter.isSelected())
 			message = new Badwordfilter(message);
 		this.chat.append("Partner: " + message.getString() + "\n");
 	}

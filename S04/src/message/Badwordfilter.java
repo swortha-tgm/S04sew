@@ -1,4 +1,4 @@
-package connection;
+package message;
 
 public class Badwordfilter extends Decorator {
 	private WriteAble wa;

@@ -1,4 +1,6 @@
-package connection;
+package message;
+
+import connection.ChatClient;
 
 public class TestMain {
 	public static void main(String[] args) {

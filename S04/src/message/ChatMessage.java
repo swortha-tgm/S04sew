@@ -1,4 +1,4 @@
-package connection;
+package message;
 /**
  * @author Wortha Simon
  * @version 20141119
