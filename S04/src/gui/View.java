@@ -14,6 +14,7 @@ import javax.swing.JTextField;
 
 import message.Badwordfilter;
 import message.ChatMessage;
+import message.Decorator;
 import message.UpperCase;
 import message.WriteAble;
 
