@@ -12,9 +12,11 @@ import java.net.UnknownHostException;
  * @version 20141118
  *
  */
-public class ChatClient implements Runnable {
+public class ChatClient {
 	String hostName;
 	int portNumber;
+	private Socket echoSocket;
+	private PrintWriter out;
 
 	/**
 	 * Erstellt einen neuen Client
@@ -28,27 +30,15 @@ public class ChatClient implements Runnable {
 	public ChatClient(String hostName, int portNumber) {
 		this.hostName = hostName;
 		this.portNumber = portNumber;
+		this.connect();
 	}
 
-	/**
-	 * Es wird die Verbindung zum Server hergestellt und gleichzeitig erm�glicht
-	 * run() die eingabe in die Konsole, um dem Server etwas zu schreiben.
-	 * 
-	 */
-	@Override
-	public void run() {
-		try (
-		// Verbindung zum Server
-		Socket echoSocket = new Socket(hostName, portNumber);
-				//"leitet" Nachricht an den Server
-				PrintWriter out = new PrintWriter(echoSocket.getOutputStream(), true);
-				//liest 
-				BufferedReader stdIn = new BufferedReader(new InputStreamReader(System.in))) {
-
-			String userInput;
-			while ((userInput = stdIn.readLine()) != null) {
-				out.println(userInput);
-			}
+	private void connect() {
+		try {
+			// Verbindung zum Server
+			this.echoSocket = new Socket(hostName, portNumber);
+			// "leitet" Nachricht an den Server
+			this.out = new PrintWriter(echoSocket.getOutputStream(), true);
 		} catch (UnknownHostException e) {
 			System.err.println("Don't know about host " + hostName);
 			System.exit(1);
@@ -56,6 +46,9 @@ public class ChatClient implements Runnable {
 			System.err.println("Couldn't get I/O for the connection to " + hostName);
 			System.exit(1);
 		}
+	}
 
+	public void sendMessage(String msg) {
+		this.out.println(msg);
 	}
 }

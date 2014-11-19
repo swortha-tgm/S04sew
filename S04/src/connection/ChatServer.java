@@ -36,8 +36,7 @@ public class ChatServer implements Runnable {
 				// bekommt die Nachricht vom Client
 				BufferedReader in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));) {
 			while ((inputLine = in.readLine()) != null) {
-				System.out.println("Partner: " + inputLine);
-				view.changeArea(inputLine);
+				view.changeArea("Partner: " + inputLine);
 			}
 		} catch (IOException e) {
 			System.out.println("Exception caught when trying to listen on port " + portNumber + " or listening for a connection");
