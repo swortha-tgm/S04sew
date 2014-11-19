@@ -11,8 +11,9 @@ import java.net.Socket;
  * @version 20141118
  *
  */
-public class ChatServer implements Runnable {
+public class ChatServer implements Runnable, WriteAble {
 	int portNumber;
+	String inputLine;
 
 	/**
 	 * @param portNumber
@@ -30,14 +31,18 @@ public class ChatServer implements Runnable {
 				Socket clientSocket = serverSocket.accept();
 				// bekommt die Nachricht vom Client
 				BufferedReader in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));) {
-			String inputLine;
 			while ((inputLine = in.readLine()) != null) {
-				System.out.println("Partner: " + inputLine);
+				//System.out.println("Partner: " + inputLine);
+				this.getString();
 			}
 		} catch (IOException e) {
 			System.out.println("Exception caught when trying to listen on port " + portNumber + " or listening for a connection");
 			System.out.println(e.getMessage());
 		}
-
+	}
+	
+	@Override
+	public String getString() {
+		return inputLine;
 	}
 }
