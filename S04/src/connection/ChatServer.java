@@ -32,7 +32,7 @@ public class ChatServer implements Runnable, WriteAble {
 				// bekommt die Nachricht vom Client
 				BufferedReader in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));) {
 			while ((inputLine = in.readLine()) != null) {
-				//System.out.println("Partner: " + inputLine);
+				System.out.println("Partner: " + inputLine);
 				this.getString();
 			}
 		} catch (IOException e) {
