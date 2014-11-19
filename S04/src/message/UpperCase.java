@@ -12,13 +12,12 @@ public class UpperCase extends Decorator {
 	public String getString() {
 		// TODO Auto-generated method stub
 		
-		
-		return wa.toString();
+		return this.wa.toString();
 	}
 
 	public WriteAble upper() {
 		// TODO Auto-generated method stub
-		String s = "abc";
+		
 		WriteAble wr = new ChatMessage(this.wa.getString().toUpperCase());
 		
 		return wr;
