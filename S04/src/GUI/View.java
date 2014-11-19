@@ -11,6 +11,11 @@ import javax.swing.JPanel;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
+import connection.Badwordfilter;
+import connection.ChatMessage;
+import connection.UpperCase;
+import connection.WriteAble;
+
 public class View extends JFrame {
 	private JButton senden;
 	private JCheckBox filter;
@@ -18,14 +23,14 @@ public class View extends JFrame {
 	private JTextArea chat;
 	private JLabel leer;
 	private JPanel bot;
-	
+
 	public View() {
 		super("SUPER COOLER CHAT");
 		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
-		
+
 		this.setSize(750, 500);
 		this.setLayout(new BorderLayout());
-		
+
 		this.senden = new JButton("Senden");
 		this.filter = new JCheckBox("Badwordfilter");
 		this.leer = new JLabel();
@@ -33,25 +38,31 @@ public class View extends JFrame {
 		this.nachricht = new JTextField();
 		this.chat = new JTextArea();
 		chat.setEditable(false);
-		
+
 		bot.setLayout(new GridLayout(1, 4));
 		bot.add(nachricht);
 		bot.add(senden);
 		bot.add(leer);
 		bot.add(filter);
-		
+
 		this.add(chat, BorderLayout.CENTER);
 		this.add(bot, BorderLayout.SOUTH);
-		
+
 		setVisible(true);
 	}
-	
-	//nur zum Testen
+
+	// nur zum Testen
 	public static void main(String[] args) {
-		new View();
+		View v = new View();
+		v.changeArea("test");
+
 	}
-	
+
 	public void changeArea(String neu) {
-		this.chat.append(neu +"\n");
+		WriteAble message = new ChatMessage(neu);
+		message = new UpperCase(message);
+		if (!filter.isEnabled())
+			message = new Badwordfilter(message);
+		this.chat.append("Partner: " + message.getString() + "\n");
 	}
 }
