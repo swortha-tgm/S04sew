@@ -23,7 +23,7 @@ public class ChatClient implements Runnable {
 	 *            Die IP Adresse des Servers mit dem eine Verbindung aufgebaut
 	 *            werden soll
 	 * @param portNumber
-	 *            Angabe auf welchem Port die Verbindung läuft
+	 *            Angabe auf welchem Port die Verbindung laeuft
 	 */
 	public ChatClient(String hostName, int portNumber) {
 		this.hostName = hostName;

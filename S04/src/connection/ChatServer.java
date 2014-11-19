@@ -16,7 +16,7 @@ public class ChatServer implements Runnable {
 
 	/**
 	 * @param portNumber
-	 *            Angabe auf welchem Port die Verbindung läuft
+	 *            Angabe auf welchem Port die Verbindung laeuft
 	 */
 	public ChatServer(int portNumber) {
 		this.portNumber = portNumber;
