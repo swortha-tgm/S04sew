@@ -5,6 +5,11 @@ import java.io.PrintWriter;
 import java.net.Socket;
 import java.net.UnknownHostException;
 
+import main.MyChat;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 /**
  * @author Wortha Simon
  * @version 20141118
@@ -13,6 +18,8 @@ import java.net.UnknownHostException;
  *
  */
 public class ChatClient {
+	private static final Logger LOGGER = (Logger) LogManager.getLogger(MyChat.class);
+
 	String hostName;
 	int portNumber;
 	private Socket echoSocket;
@@ -40,11 +47,13 @@ public class ChatClient {
 			// "leitet" Nachricht an den Server
 			this.out = new PrintWriter(echoSocket.getOutputStream(), true);
 		} catch (UnknownHostException e) {
-			System.err.println("Don't know about host " + hostName);
+			LOGGER.info("Don't know about host " + hostName);
 			System.exit(1);
 		} catch (IOException e) {
-			System.err.println("Couldn't get I/O for the connection to " + hostName);
+			LOGGER.info("Couldn't get I/O for the connection to " + hostName);
 			System.exit(1);
+		}catch (Exception e) {
+			LOGGER.info("Error");
 		}
 	}
 
