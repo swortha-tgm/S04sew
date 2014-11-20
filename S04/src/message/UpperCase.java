@@ -1,5 +1,9 @@
 package message;
 
+/**
+ * @author simon
+ *
+ */
 public class UpperCase extends Decorator {
 
 	private WriteAble wa;
@@ -12,14 +16,6 @@ public class UpperCase extends Decorator {
 	public String getString() {
 		// TODO Auto-generated method stub
 		
-		return this.wa.toString();
-	}
-
-	public WriteAble upper() {
-		// TODO Auto-generated method stub
-		
-		WriteAble wr = new ChatMessage(this.wa.getString().toUpperCase());
-		
-		return wr;
+		return this.wa.getString().toUpperCase();
 	}
 }

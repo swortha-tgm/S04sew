@@ -33,6 +33,7 @@ public class Controller implements ActionListener {
 		if (v.isBSendenClick(e)) {
 			cc.sendMessage(v.getMessage());
 			v.changeArea("Ich: " + v.getMessage());
+			v.clearTextField();
 		}
 	}
 }

@@ -2,6 +2,10 @@ package message;
 
 import java.util.ArrayList;
 
+/**
+ * @author simon
+ *
+ */
 public class Badwordfilter extends Decorator {
 	private WriteAble wa;
 
@@ -18,7 +22,7 @@ public class Badwordfilter extends Decorator {
 	public WriteAble filter() {
 		ArrayList<String> badwords = new ArrayList<String>();
 		badwords.add("ARSCH");
-		badwords.add("SCHEIß");
+		badwords.add("SCHEIï¿½");
 		badwords.add("DUMBASS");
 
 		String[] brav = null;
