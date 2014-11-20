@@ -66,6 +66,8 @@ public class View extends JFrame {
 		this.add(chat, BorderLayout.CENTER);
 		this.add(bot, BorderLayout.SOUTH);
 		
+		this.getRootPane().setDefaultButton(senden);
+		
 		senden.addActionListener(this.c);
 
 		setVisible(true);
@@ -76,7 +78,7 @@ public class View extends JFrame {
 	 */
 	public void changeArea(String neu) {
 		WriteAble message = new ChatMessage(neu);
-		message = new UpperCase(message).upper();
+		message = new UpperCase(message);
 		if (filter.isSelected())
 			message = new Badwordfilter(message);
 		this.chat.append(message.getString() + "\n");
@@ -95,5 +97,8 @@ public class View extends JFrame {
 	 */
 	public String getMessage() {
 		return nachricht.getText();
+	}
+	public void clearTextField() {
+		this.nachricht.setText("");
 	}
 }
