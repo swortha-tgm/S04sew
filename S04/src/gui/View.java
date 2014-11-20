@@ -12,8 +12,6 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
-import javax.swing.ScrollPaneConstants;
-
 import message.Badwordfilter;
 import message.ChatMessage;
 import message.UpperCase;
@@ -68,7 +66,7 @@ public class View extends JFrame {
 		bot.add(leer);
 		bot.add(filter);
 
-		this.add(chat, BorderLayout.CENTER);
+		this.add(scroll, BorderLayout.CENTER);
 		this.add(bot, BorderLayout.SOUTH);
 
 		this.getRootPane().setDefaultButton(senden);
