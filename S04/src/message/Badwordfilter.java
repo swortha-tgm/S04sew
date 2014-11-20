@@ -3,7 +3,7 @@ package message;
 import java.util.ArrayList;
 
 /**
- * @author simon
+ * @author Schober Samuel
  *
  */
 public class Badwordfilter extends Decorator {
@@ -16,28 +16,25 @@ public class Badwordfilter extends Decorator {
 	@Override
 	public String getString() {
 		// TODO Auto-generated method stub
-		return this.wa.toString();
-	}
-
-	public WriteAble filter() {
-		ArrayList<String> badwords = new ArrayList<String>();
-		badwords.add("ARSCH");
-		badwords.add("SCHEISS");
-		badwords.add("DUMBASS");
-
-		String[] brav = null;
-
-		String wd = null;
-
-		for (int i = -1; i < badwords.size(); i++) {
-			if (this.wa.getString().contains((CharSequence) badwords)) {
-				wd = wd.replace(this.wa.getString(), brav.toString());
+		ArrayList<String> badwords = new ArrayList<>();
+		badwords.add(0, "ARSCH");
+		badwords.add(1, "SCHEISS");
+		badwords.add(2, "DUMBASS");
+		
+		String brav = "******";
+		
+		WriteAble wb = null ;
+		
+		/* for (int i = 0; i <= badwords.size(); i++) {
+			if (this.wa.getString().contains(badwords.get(badwords.indexOf(i)))) {
+				wb = new ChatMessage(this.wa.getString().replace(this.wa.getString(), brav));
+				System.out.println("awd");
+			}else{ 
+				return this.wa.getString().toLowerCase();
 			}
-		}
-
-		WriteAble wr = new ChatMessage(wd);
-
-		return wr;
+		} */
+		
+		return this.wa.getString().toLowerCase();
 	}
 
 }
