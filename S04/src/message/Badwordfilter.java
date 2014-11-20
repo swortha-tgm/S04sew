@@ -19,27 +19,25 @@ public class Badwordfilter extends Decorator {
 		return this.wa.toString();
 	}
 
-	/* public WriteAble filter() {
+	public WriteAble filter() {
 		ArrayList<String> badwords = new ArrayList<String>();
 		badwords.add("ARSCH");
-		badwords.add("SCHEI�");
+		badwords.add("SCHEISS");
 		badwords.add("DUMBASS");
 
 		String[] brav = null;
-		
+
 		String wd = null;
 
-	
-		if(this.wa.getString().contains((CharSequence) badwords)) {
-			for(int i=0; i<this.wa.getString().length(); i++){
-				brav[i] = "*";
+		for (int i = -1; i < badwords.size(); i++) {
+			if (this.wa.getString().contains((CharSequence) badwords)) {
+				wd = wd.replace(this.wa.getString(), brav.toString());
 			}
-			wd = wd.replace(this.wa.getString(), brav.toString());
 		}
-		
+
 		WriteAble wr = new ChatMessage(wd);
 
 		return wr;
-	} */
+	}
 
 }
