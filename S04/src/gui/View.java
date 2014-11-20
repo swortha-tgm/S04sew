@@ -9,12 +9,11 @@ import javax.swing.JCheckBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
-
 import message.Badwordfilter;
 import message.ChatMessage;
-import message.Decorator;
 import message.UpperCase;
 import message.WriteAble;
 
@@ -22,7 +21,7 @@ import message.WriteAble;
  * @author Wortha Simon
  * @version 20141117
  *
- *	Implementiert alle Anzeigefelder fuer die GUI
+ *          Implementiert alle Anzeigefelder fuer die GUI
  */
 public class View extends JFrame {
 	/**
@@ -33,19 +32,21 @@ public class View extends JFrame {
 	private JCheckBox filter;
 	private JTextField nachricht;
 	private JTextArea chat;
+	private JScrollPane scroll;
 	private JLabel leer;
 	private JPanel bot;
 	private Controller c;
 
 	/**
 	 * @param c
+	 *            Der Controller, in dem der Actionlistener ist
 	 */
 	public View(Controller c) {
 		super("SUPER COOLER CHAT");
 		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
 
 		this.c = c;
-		
+
 		this.setSize(750, 500);
 		this.setLayout(new BorderLayout());
 
@@ -55,6 +56,8 @@ public class View extends JFrame {
 		this.bot = new JPanel();
 		this.nachricht = new JTextField();
 		this.chat = new JTextArea();
+		this.scroll = new JScrollPane(chat);
+
 		chat.setEditable(false);
 
 		bot.setLayout(new GridLayout(1, 4));
@@ -63,11 +66,11 @@ public class View extends JFrame {
 		bot.add(leer);
 		bot.add(filter);
 
-		this.add(chat, BorderLayout.CENTER);
+		this.add(scroll, BorderLayout.CENTER);
 		this.add(bot, BorderLayout.SOUTH);
-		
+
 		this.getRootPane().setDefaultButton(senden);
-		
+
 		senden.addActionListener(this.c);
 
 		setVisible(true);
@@ -75,6 +78,8 @@ public class View extends JFrame {
 
 	/**
 	 * @param neu
+	 *            der neue String, bzw. die Nachricht die der TextArea
+	 *            hinzugefügt werden soll
 	 */
 	public void changeArea(String neu) {
 		WriteAble message = new ChatMessage(neu);
@@ -83,21 +88,26 @@ public class View extends JFrame {
 			message = new Badwordfilter(message);
 		this.chat.append(message.getString() + "\n");
 	}
-	
+
 	/**
 	 * @param e
-	 * @return
+	 *            ActionEvent
+	 * @return ob der Button geklickt wird
 	 */
 	public boolean isBSendenClick(ActionEvent e) {
 		return e.getSource() == senden;
 	}
-	
+
 	/**
-	 * @return
+	 * @return gibt die Nachricht die in das TextFiled geschrieben wird zurück
 	 */
 	public String getMessage() {
 		return nachricht.getText();
 	}
+
+	/**
+	 * Setzt das TextField auf einen leeren String zurueck
+	 */
 	public void clearTextField() {
 		this.nachricht.setText("");
 	}

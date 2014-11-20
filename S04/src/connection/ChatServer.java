@@ -11,6 +11,8 @@ import java.net.Socket;
 /**
  * @author Wortha Simon
  * @version 20141118
+ * 
+ *          Der Server der die Nachrichten des Seners empfängt
  *
  */
 public class ChatServer implements Runnable {
@@ -21,6 +23,9 @@ public class ChatServer implements Runnable {
 	/**
 	 * @param portNumber
 	 *            Angabe auf welchem Port die Verbindung laeuft
+	 * @param v
+	 *            Es muss die View, also die GUI uebergen werden, da sonst die
+	 *            Nachricht nicht weitergegeben werden kann
 	 */
 	public ChatServer(int portNumber, View v) {
 		this.portNumber = portNumber;

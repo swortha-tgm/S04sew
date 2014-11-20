@@ -1,8 +1,6 @@
 package connection;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.Socket;
 import java.net.UnknownHostException;
@@ -10,6 +8,8 @@ import java.net.UnknownHostException;
 /**
  * @author Wortha Simon
  * @version 20141118
+ * 
+ *          Der Cient der die Nachrichten an den Server des EMpfaengers sendet
  *
  */
 public class ChatClient {
@@ -48,6 +48,11 @@ public class ChatClient {
 		}
 	}
 
+	/**
+	 * @param msg
+	 *            leitet die Nachricht (bzw. den String) and den Empfaenger
+	 *            weiter.
+	 */
 	public void sendMessage(String msg) {
 		this.out.println(msg);
 	}

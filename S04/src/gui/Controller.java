@@ -10,6 +10,8 @@ import connection.ChatServer;
  * @author Wortha Simon
  * @version 20141118
  *
+ *          Implementiert den Actionlistener für View, weiters werden die View,
+ *          der Server und derClient hier gestartet
  */
 public class Controller implements ActionListener {
 	View v;
