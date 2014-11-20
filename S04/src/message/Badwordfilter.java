@@ -22,7 +22,7 @@ public class Badwordfilter extends Decorator {
 	public WriteAble filter() {
 		ArrayList<String> badwords = new ArrayList<String>();
 		badwords.add("ARSCH");
-		badwords.add("SCHEI�");
+		badwords.add("SCHEISS");
 		badwords.add("DUMBASS");
 
 		String[] brav = null;
