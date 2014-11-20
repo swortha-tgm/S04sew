@@ -8,6 +8,11 @@ import java.io.InputStreamReader;
 import java.net.ServerSocket;
 import java.net.Socket;
 
+import main.MyChat;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 /**
  * @author Wortha Simon
  * @version 20141118
@@ -16,6 +21,8 @@ import java.net.Socket;
  *
  */
 public class ChatServer implements Runnable {
+	private static final Logger LOGGER = (Logger) LogManager.getLogger(MyChat.class);
+
 	int portNumber;
 	String inputLine;
 	private View view;
@@ -44,8 +51,10 @@ public class ChatServer implements Runnable {
 				view.changeArea("Partner: " + inputLine);
 			}
 		} catch (IOException e) {
-			System.out.println("Exception caught when trying to listen on port " + portNumber + " or listening for a connection");
-			System.out.println(e.getMessage());
+			LOGGER.info("Exception caught when trying to listen on port " + portNumber + " or listening for a connection");
+			LOGGER.info(e.getMessage());
+		} catch (IllegalArgumentException e) {
+			LOGGER.info("ungueltige Portnummer");
 		}
 	}
 }

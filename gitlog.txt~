@@ -1,0 +1,306 @@
+commit ccbe9c24a0c1ee890f0efc811b25c5d5b00b08c2
+Author: sschober-tgm <sschober@student.tgm.ac.at>
+Date:   Thu Nov 20 13:10:36 2014 +0100
+
+    awdawdad
+
+ S04/files/protokoll/Dokumentation.docx | Bin 38205 -> 37479 bytes
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 5e2ddb525f267a9463b975237d496ccdab253f93
+Merge: 15cc62b 9ea21b9
+Author: sschober-tgm <sschober@student.tgm.ac.at>
+Date:   Thu Nov 20 13:07:55 2014 +0100
+
+    Merge branch 'master' of https://github.com/swortha-tgm/S04sew
+
+commit 15cc62b32d09f267296788cec4c84fb65e770c51
+Author: sschober-tgm <sschober@student.tgm.ac.at>
+Date:   Thu Nov 20 13:07:39 2014 +0100
+
+    Abgeaendert
+
+ S04/files/protokoll/Dokumentation.docx | Bin 36511 -> 38205 bytes
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 57f371bde2dcfb41f3ba6af5c7de5bc1a3498c4b
+Author: sschober-tgm <sschober@student.tgm.ac.at>
+Date:   Thu Nov 20 13:06:45 2014 +0100
+
+    Added java doc
+
+ S04/src/message/Badwordfilter.java | 41 ++++++++++++++++++--------------------
+ S04/src/message/UpperCase.java     | 10 +++++++++-
+ 2 files changed, 28 insertions(+), 23 deletions(-)
+
+commit 9ea21b9b9f7dbf805d4a787d4d401c82eb5448f7
+Author: swortha-tgm <swortha@tgm.ac.at>
+Date:   Thu Nov 20 13:01:38 2014 +0100
+
+    updated UML, added Scrollbar to GUI
+
+ S04/files/protokoll/Chat.asta | Bin 15582 -> 20207 bytes
+ S04/src/gui/View.java         |   4 +---
+ 2 files changed, 1 insertion(+), 3 deletions(-)
+
+commit 09ebb4c18c3c8ddb1c1df11b98f811d1c55ca1ba
+Merge: 95bdbd7 051ea75
+Author: swortha-tgm <swortha@tgm.ac.at>
+Date:   Thu Nov 20 12:32:38 2014 +0100
+
+    Merge branch 'master' of github.com:swortha-tgm/S04sew
+
+commit 95bdbd7a5d07b00b9912c21d0fbc3ae28fd9436b
+Author: swortha-tgm <swortha@tgm.ac.at>
+Date:   Thu Nov 20 12:32:06 2014 +0100
+
+    added Javadoc comments
+
+ S04/bin/connection/ChatClient.class | Bin 1572 -> 1572 bytes
+ S04/bin/connection/ChatServer.class | Bin 2091 -> 2091 bytes
+ S04/src/connection/ChatClient.java  |   9 +++++++--
+ S04/src/connection/ChatServer.java  |   5 +++++
+ S04/src/gui/Controller.java         |   2 ++
+ S04/src/gui/View.java               |  30 +++++++++++++++++++++---------
+ S04/src/message/ChatMessage.java    |   8 +++++++-
+ S04/src/message/WriteAble.java      |   4 +++-
+ 8 files changed, 45 insertions(+), 13 deletions(-)
+
+commit 051ea75bd9c8aec803dc9cad30147c63f4321e4d
+Author: sschober-tgm <sschober@student.tgm.ac.at>
+Date:   Thu Nov 20 11:44:06 2014 +0100
+
+    Umlaut no more
+
+ S04/src/message/Badwordfilter.java | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit c4ce469a2b8aab3de3f5b131909b00afee128e0c
+Merge: 5e5c633 b2ed0e7
+Author: sschober-tgm <sschober@student.tgm.ac.at>
+Date:   Thu Nov 20 11:43:18 2014 +0100
+
+    Merge branch 'master' of https://github.com/swortha-tgm/S04sew
+
+commit 5e5c633ce1f9d4aff298535f844b25fba852e949
+Author: sschober-tgm <sschober@student.tgm.ac.at>
+Date:   Thu Nov 20 11:43:07 2014 +0100
+
+    changed the code
+
+ S04/src/message/Badwordfilter.java | 16 +++++++---------
+ 1 file changed, 7 insertions(+), 9 deletions(-)
+
+commit b2ed0e738fcae2bbed1bf94f24652de2cb95e82b
+Author: swortha-tgm <swortha@tgm.ac.at>
+Date:   Thu Nov 20 11:35:11 2014 +0100
+
+    updated View and UpperCase
+
+ S04/src/gui/Controller.java        |  1 +
+ S04/src/gui/View.java              |  7 ++++++-
+ S04/src/message/Badwordfilter.java |  6 +++++-
+ S04/src/message/UpperCase.java     | 14 +++++---------
+ 4 files changed, 17 insertions(+), 11 deletions(-)
+
+commit 7c854cf7e24e6631064ac52ae9de56b315b15fd9
+Author: sschober-tgm <sschober@student.tgm.ac.at>
+Date:   Wed Nov 19 20:55:01 2014 +0100
+
+    testing badwordfilters
+
+ S04/src/message/Badwordfilter.java | 27 ++++++++++++++++++++++++++-
+ S04/src/message/UpperCase.java     |  5 ++---
+ 2 files changed, 28 insertions(+), 4 deletions(-)
+
+commit 27ac67d8a9152007ffaa8dff234719cddce13cb1
+Author: sschober-tgm <sschober@student.tgm.ac.at>
+Date:   Wed Nov 19 19:13:55 2014 +0100
+
+    Fixed UpperCase.java
+
+ S04/src/gui/View.java          |  1 +
+ S04/src/message/UpperCase.java | 10 ++++------
+ 2 files changed, 5 insertions(+), 6 deletions(-)
+
+commit 80727fab3c0e7edd0b7017bbf8a92cbf847e7a99
+Author: sschober-tgm <sschober@student.tgm.ac.at>
+Date:   Wed Nov 19 17:51:56 2014 +0100
+
+    added code to UpperCase.java corrected comment errors
+
+ S04/src/gui/View.java          |  8 ++++++--
+ S04/src/main/MyChat.java       |  2 +-
+ S04/src/message/UpperCase.java | 12 ++++++++++++
+ 3 files changed, 19 insertions(+), 3 deletions(-)
+
+commit 23d173ab63ce0f48b89b08f433baec58fb5035d0
+Author: sschober-tgm <sschober@student.tgm.ac.at>
+Date:   Wed Nov 19 17:23:10 2014 +0100
+
+    corrected Umlauts
+
+ S04/src/gui/Controller.java    | 4 ++--
+ S04/src/main/MyChat.java       | 4 ++--
+ S04/src/message/WriteAble.java | 2 +-
+ 3 files changed, 5 insertions(+), 5 deletions(-)
+
+commit e54cfc2dd740454b8687dad09454034eb9e99f7d
+Author: swortha-tgm <swortha@tgm.ac.at>
+Date:   Wed Nov 19 16:44:36 2014 +0100
+
+    it's working
+
+ S04/bin/connection/ChatClient.class | Bin 2146 -> 1572 bytes
+ S04/bin/connection/ChatServer.class | Bin 2105 -> 2091 bytes
+ S04/src/connection/ChatClient.java  |  35 +++++++++++----------------
+ S04/src/connection/ChatServer.java  |   3 +--
+ S04/src/gui/Controller.java         |  38 +++++++++++++++++++++++++++++
+ S04/src/gui/View.java               |  46 ++++++++++++++++++++++++++++--------
+ S04/src/main/MyChat.java            |  26 ++++++++++++++++++++
+ S04/src/message/Decorator.java      |   5 ++++
+ S04/src/message/TestMain.java       |  12 ----------
+ S04/src/message/WriteAble.java      |   8 +++++++
+ 10 files changed, 128 insertions(+), 45 deletions(-)
+
+commit 8f34ae999f8b699f3541b819dedf881ced2df3b0
+Author: swortha-tgm <swortha@tgm.ac.at>
+Date:   Wed Nov 19 15:17:52 2014 +0100
+
+    changed packegeing
+
+ .gitignore                            |   2 +
+ S04/bin/GUI/View.class                | Bin 2317 -> 0 bytes
+ S04/bin/connection/ChatServer.class   | Bin 2105 -> 2105 bytes
+ S04/src/GUI/View.java                 |  68 ----------------------------------
+ S04/src/connection/Badwordfilter.java |  16 --------
+ S04/src/connection/ChatMessage.java   |  18 ---------
+ S04/src/connection/ChatServer.java    |   4 +-
+ S04/src/connection/Decorator.java     |   5 ---
+ S04/src/connection/TestMain.java      |  10 -----
+ S04/src/connection/UpperCase.java     |  16 --------
+ S04/src/connection/WriteAble.java     |   5 ---
+ S04/src/gui/View.java                 |  68 ++++++++++++++++++++++++++++++++++
+ S04/src/message/Badwordfilter.java    |  16 ++++++++
+ S04/src/message/ChatMessage.java      |  18 +++++++++
+ S04/src/message/Decorator.java        |   5 +++
+ S04/src/message/TestMain.java         |  12 ++++++
+ S04/src/message/UpperCase.java        |  16 ++++++++
+ S04/src/message/WriteAble.java        |   5 +++
+ 18 files changed, 144 insertions(+), 140 deletions(-)
+
+commit 07d5f91d4e5c0f98fa1414357224076406140e66
+Author: swortha-tgm <swortha@tgm.ac.at>
+Date:   Wed Nov 19 15:11:43 2014 +0100
+
+    updated ChatServer, View and UML; added ChatMessage.java
+
+ S04/bin/GUI/View.class              | Bin 1996 -> 2317 bytes
+ S04/bin/connection/ChatServer.class | Bin 2095 -> 2105 bytes
+ S04/files/protokoll/Chat.asta       | Bin 15512 -> 15582 bytes
+ S04/src/GUI/View.java               |  35 +++++++++++++++++++++++------------
+ S04/src/connection/ChatMessage.java |  18 ++++++++++++++++++
+ S04/src/connection/ChatServer.java  |  15 +++++++--------
+ S04/src/connection/TestMain.java    |   4 ++--
+ 7 files changed, 50 insertions(+), 22 deletions(-)
+
+commit fe32a7fd11121fec6b733c0c310762387f2a3bfc
+Author: swortha-tgm <swortha@tgm.ac.at>
+Date:   Wed Nov 19 11:27:27 2014 +0100
+
+    updated view
+
+ S04/bin/GUI/View.class            | Bin 1614 -> 1996 bytes
+ S04/files/protokoll/Chat.asta     | Bin 15729 -> 15512 bytes
+ S04/src/GUI/View.java             |   4 ++++
+ S04/src/connection/TestMain.java  |   2 +-
+ S04/src/connection/UpperCase.java |   1 -
+ 5 files changed, 5 insertions(+), 2 deletions(-)
+
+commit aecef31dde6f6860ca86f6c67de85ef8f1c89e0f
+Author: swortha-tgm <swortha@tgm.ac.at>
+Date:   Wed Nov 19 10:10:39 2014 +0100
+
+    some changes
+
+ S04/bin/connection/ChatServer.class | Bin 2051 -> 2095 bytes
+ S04/src/connection/ChatServer.java  |   2 +-
+ S04/src/connection/TestMain.java    |   2 +-
+ 3 files changed, 2 insertions(+), 2 deletions(-)
+
+commit cc9a8bbe8e8e927983190d282bac0e399466194a
+Author: swortha-tgm <swortha@tgm.ac.at>
+Date:   Wed Nov 19 09:27:39 2014 +0100
+
+    add TestMain
+
+ S04/src/connection/TestMain.java | 10 ++++++++++
+ 1 file changed, 10 insertions(+)
+
+commit 499ecc21569d96bc96e77c5aee269a2d8e32d6ad
+Author: swortha-tgm <swortha@tgm.ac.at>
+Date:   Wed Nov 19 09:19:28 2014 +0100
+
+    added Classes, Decorator and WriteABle Interface
+
+ S04/.gitignore                        |   1 +
+ S04/bin/connection/ChatServer.class   | Bin 2000 -> 2051 bytes
+ S04/src/connection/Badwordfilter.java |  16 ++++++++++++++++
+ S04/src/connection/ChatServer.java    |  13 +++++++++----
+ S04/src/connection/Decorator.java     |   5 +++++
+ S04/src/connection/UpperCase.java     |  17 +++++++++++++++++
+ S04/src/connection/WriteAble.java     |   5 +++++
+ 7 files changed, 53 insertions(+), 4 deletions(-)
+
+commit 175af4a0d19ea272dc9da1554f505a1ad1ebcb96
+Author: sschober-tgm <sschober@student.tgm.ac.at>
+Date:   Wed Nov 19 08:51:46 2014 +0100
+
+    corrected Umlaut errors
+
+ S04/src/connection/ChatClient.java | 2 +-
+ S04/src/connection/ChatServer.java | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+commit 7ccb6a42dd8fafada4f01350b3151784bd82d087
+Author: sschober-tgm <sschober@student.tgm.ac.at>
+Date:   Wed Nov 19 08:49:19 2014 +0100
+
+    added UML
+
+ S04/files/protokoll/Chat.asta | Bin 0 -> 15729 bytes
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit b315de76614d26d19a49df03e36779559ab34cac
+Author: sschober-tgm <sschober@student.tgm.ac.at>
+Date:   Wed Nov 19 08:34:16 2014 +0100
+
+    Added protokoll.docx
+
+ S04/files/protokoll/Dokumentation.docx | Bin 0 -> 36511 bytes
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit cc546c220097edd68f1cd768b4deae57b141b808
+Author: swortha-tgm <swortha@tgm.ac.at>
+Date:   Tue Nov 18 16:35:01 2014 +0100
+
+    added GUI
+
+ S04/bin/GUI/View.class | Bin 0 -> 1614 bytes
+ S04/src/GUI/View.java  |  53 +++++++++++++++++++++++++++++++++++++++++++++++++
+ 2 files changed, 53 insertions(+)
+
+commit 8ff4baf5095944c52a343d1c23c5b62f4c687cd0
+Author: Simon <swortha@tgm.ac.at>
+Date:   Tue Nov 18 15:31:42 2014 +0100
+
+    Server-Client verbindung
+
+ S04/.classpath                           |   6 +++
+ S04/.project                             |  17 +++++++++
+ S04/.settings/org.eclipse.jdt.core.prefs |  11 ++++++
+ S04/bin/connection/ChatClient.class      | Bin 0 -> 2146 bytes
+ S04/bin/connection/ChatServer.class      | Bin 0 -> 2000 bytes
+ S04/src/connection/ChatClient.java       |  61 +++++++++++++++++++++++++++++++
+ S04/src/connection/ChatServer.java       |  43 ++++++++++++++++++++++
+ 7 files changed, 138 insertions(+)
