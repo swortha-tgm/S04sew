@@ -52,9 +52,10 @@ public class ChatServer implements Runnable {
 			}
 		} catch (IOException e) {
 			LOGGER.info("Exception caught when trying to listen on port " + portNumber + " or listening for a connection");
-			LOGGER.info(e.getMessage());
+			System.exit(1);
 		} catch (IllegalArgumentException e) {
 			LOGGER.info("ungueltige Portnummer");
+			System.exit(1);
 		}
 	}
 }

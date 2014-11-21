@@ -54,6 +54,7 @@ public class ChatClient {
 			System.exit(1);
 		}catch (Exception e) {
 			LOGGER.info("Error");
+			System.exit(1);
 		}
 	}
 

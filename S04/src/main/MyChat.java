@@ -25,12 +25,16 @@ public class MyChat {
 			new Controller(args[0], Integer.parseInt(args[1]));
 		} catch (NumberFormatException nfe) {
 			LOGGER.info("ungueltiger Port");
+			System.exit(1);
 		} catch (ArrayIndexOutOfBoundsException aioobe) {
 			LOGGER.info("unguelite Eingabe");
+			System.exit(1);
 		} catch (IllegalArgumentException iae) {
 			LOGGER.info("unguelige Eingabe");
+			System.exit(1);
 		} catch (Exception e) {
 			LOGGER.info("FEHLER");
+			System.exit(1);
 		}
 	}
 }
