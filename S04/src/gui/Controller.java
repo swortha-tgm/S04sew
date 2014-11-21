@@ -16,6 +16,8 @@ import connection.ChatServer;
 public class Controller implements ActionListener {
 	View v;
 	ChatClient cc;
+	private String host;
+	private int port;
 
 	/**
 	 * @param hostName
@@ -24,10 +26,11 @@ public class Controller implements ActionListener {
 	 *            Der Port ueber dem die Verbindung laeuft
 	 */
 	public Controller(String hostName, int port) {
+		this.port = port;
+		this.host = hostName;
 		v = new View(this);
 		Thread server = new Thread(new ChatServer(port, v));
 		server.start();
-		cc = new ChatClient(hostName, port);
 	}
 
 	@Override
@@ -36,6 +39,10 @@ public class Controller implements ActionListener {
 			cc.sendMessage(v.getMessage());
 			v.changeArea("Ich: " + v.getMessage());
 			v.clearTextField();
+		}
+		if (v.isBVerbindenClick(e)) {
+			cc = new ChatClient(host, port);
+			v.enableSenden();
 		}
 	}
 }

@@ -35,7 +35,7 @@ public class View extends JFrame {
 	private JTextField nachricht;
 	private JTextArea chat;
 	private JScrollPane scroll;
-	private JLabel leer;
+	private JButton verbinden;
 	private JPanel bot;
 	private Controller c;
 
@@ -54,7 +54,7 @@ public class View extends JFrame {
 
 		this.senden = new JButton("Senden");
 		this.filter = new JCheckBox("Badwordfilter");
-		this.leer = new JLabel();
+		this.verbinden = new JButton("Verbinden");
 		this.bot = new JPanel();
 		this.nachricht = new JTextField();
 		this.chat = new JTextArea();
@@ -65,12 +65,13 @@ public class View extends JFrame {
 		caret.setUpdatePolicy(DefaultCaret.ALWAYS_UPDATE);
 		
 		chat.setEditable(false);
+		senden.setEnabled(false);
 
 		bot.setLayout(new GridLayout(1, 4));
 		bot.add(nachricht);
-		bot.add(senden);
-		bot.add(leer);
 		bot.add(filter);
+		bot.add(senden);
+		bot.add(verbinden);	
 
 		this.add(scroll, BorderLayout.CENTER);
 		this.add(bot, BorderLayout.SOUTH);
@@ -78,6 +79,7 @@ public class View extends JFrame {
 		this.getRootPane().setDefaultButton(senden);
 
 		senden.addActionListener(this.c);
+		verbinden.addActionListener(this.c);
 
 		setVisible(true);
 	}
@@ -103,6 +105,15 @@ public class View extends JFrame {
 	public boolean isBSendenClick(ActionEvent e) {
 		return e.getSource() == senden;
 	}
+	
+	/**
+	 * @param e
+	 *            ActionEvent
+	 * @return ob der Button geklickt wird
+	 */
+	public boolean isBVerbindenClick(ActionEvent e) {
+		return e.getSource() == verbinden;
+	}
 
 	/**
 	 * @return gibt die Nachricht die in das TextFiled geschrieben wird zurück
@@ -116,5 +127,11 @@ public class View extends JFrame {
 	 */
 	public void clearTextField() {
 		this.nachricht.setText("");
+	}
+	/**
+	 * setzt Enabled des senden Buttons auf true
+	 */
+	public void enableSenden() {
+		senden.setEnabled(true);
 	}
 }
