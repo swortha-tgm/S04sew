@@ -12,6 +12,8 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
+import javax.swing.text.DefaultCaret;
+
 import message.Badwordfilter;
 import message.ChatMessage;
 import message.UpperCase;
@@ -57,7 +59,11 @@ public class View extends JFrame {
 		this.nachricht = new JTextField();
 		this.chat = new JTextArea();
 		this.scroll = new JScrollPane(chat);
-
+		
+		//Autoscroll
+		DefaultCaret caret = (DefaultCaret) chat.getCaret();
+		caret.setUpdatePolicy(DefaultCaret.ALWAYS_UPDATE);
+		
 		chat.setEditable(false);
 
 		bot.setLayout(new GridLayout(1, 4));
