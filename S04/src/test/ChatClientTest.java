@@ -18,7 +18,7 @@ public class ChatClientTest {
 
 	/**
 	 * 
-	 */
+	 
 	@Test (expected = java.io.IOException.class)
 	public void testHostname() {
 		ChatClient chat = new ChatClient(null, 0);
@@ -33,5 +33,10 @@ public class ChatClientTest {
 		
 		assertEquals("0", chat.getPortNumber());
 	}
+	*/
 	
+	@Test
+	public void test() {
+		fail("not implemented yet");
+	}
 }
