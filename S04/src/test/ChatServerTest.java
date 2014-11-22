@@ -17,7 +17,7 @@ public class ChatServerTest {
 	public void testPortNumber() {
 		ChatServer server = new ChatServer(1234, v);
 		
-		assertEquals(0, server.getPortNumber());
+		assertEquals(1234, server.getPortNumber());
 	}
 
 }
