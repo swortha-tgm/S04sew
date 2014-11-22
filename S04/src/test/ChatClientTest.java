@@ -1,6 +1,8 @@
 package test;
 
 import static org.junit.Assert.*;
+import gui.Controller;
+import gui.View;
 
 import java.io.IOException;
 import java.net.UnknownHostException;
@@ -9,6 +11,7 @@ import org.junit.Test;
 import org.junit.rules.ExpectedException;
 
 import connection.ChatClient;
+import connection.ChatServer;
 
 /**
  * @author Samuel Schober
@@ -16,27 +19,31 @@ import connection.ChatClient;
  */
 public class ChatClientTest {
 
-	/**
-	 * 
-	 
-	@Test (expected = java.io.IOException.class)
-	public void testHostname() {
-		ChatClient chat = new ChatClient(null, 0);
+
+	@Test
+	public void testHostname() throws UnknownHostException, IOException{
+		Controller c = new Controller("127.0.0.1", 1234);
+		View v = new View(c);
 		
-		assertEquals("null", chat.getHostName());
+		ChatServer server = new ChatServer(1234, v);
+		
+		ChatClient chat = new ChatClient("127.0.0.1", 1234);
+		
+		assertEquals("127.0.0.1", chat.getHostName());
 	}
 	
 
-	@Test (expected = java.io.IOException.class)
-	public void testPort() {
-		ChatClient chat = new ChatClient(null, 0);
-		
-		assertEquals("0", chat.getPortNumber());
-	}
-	*/
-	
 	@Test
-	public void test() {
-		fail("not implemented yet");
+	public void testPort() throws UnknownHostException, IOException{
+		Controller c = new Controller("127.0.0.1", 1234);
+		View v = new View(c);
+		
+		ChatServer server = new ChatServer(1234, v);
+		
+		ChatClient chat = new ChatClient("127.0.0.1", 1234);
+		
+		assertEquals(1234, chat.getPortNumber());
 	}
+	
+	
 }
