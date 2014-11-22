@@ -66,4 +66,13 @@ public class ChatClient {
 	public void sendMessage(String msg) {
 		this.out.println(msg);
 	}
+
+	public String getHostName() {
+		return hostName;
+	}
+
+	public int getPortNumber() {
+		return portNumber;
+	}
+
 }
