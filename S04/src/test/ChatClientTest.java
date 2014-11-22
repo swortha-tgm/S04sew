@@ -5,7 +5,10 @@ import gui.Controller;
 import gui.View;
 
 import java.io.IOException;
+import java.io.PrintWriter;
+import java.net.Socket;
 import java.net.UnknownHostException;
+import java.util.Scanner;
 
 import org.junit.Assert;
 import org.junit.Test;
@@ -59,7 +62,20 @@ public class ChatClientTest {
 		catch (Exception e) {
 	    String expectedMessage = "Exception caught when trying to listen on port 0 or listening for a connection";
 	    Assert.assertEquals( "Exception message must be correct", expectedMessage, e.getMessage() );
-		}  
+		} 
 	}
 	
+	@Test
+	public void testSendMessage() throws UnknownHostException, IOException{
+		Controller c = new Controller("127.0.0.1", 13);
+		View v = new View(c);
+		
+		ChatServer server = new ChatServer(13, v);
+		
+		ChatClient chat = new ChatClient("127.0.0.1", 13);
+		
+		chat.sendMessage("test");
+		
+		assertEquals("test", "test");
+	}
 }
