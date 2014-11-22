@@ -58,4 +58,8 @@ public class ChatServer implements Runnable {
 			System.exit(1);
 		}
 	}
+	
+	public int getPortNumber() {
+		return portNumber;
+	}
 }
