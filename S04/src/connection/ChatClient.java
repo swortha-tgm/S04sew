@@ -67,10 +67,20 @@ public class ChatClient {
 		this.out.println(msg);
 	}
 
+	/**
+	 * Dient nur dazu, dass besser getestet werden kann
+	 * 
+	 * @return	gitb die IP-Adresse zurück
+	 */
 	public String getHostName() {
 		return hostName;
 	}
 
+	/**
+	 * Dient nur dazu, dass besser getestet werden kann
+	 * 
+	 * @return	gitb die Portnummer zurück
+	 */
 	public int getPortNumber() {
 		return portNumber;
 	}
