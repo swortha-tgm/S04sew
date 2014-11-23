@@ -12,6 +12,10 @@ import org.junit.Test;
 
 import connection.ChatServer;
 
+/**
+ * @author Schober Samuel
+ *
+ */
 public class ChatServerTest {
 	
 	@Test
